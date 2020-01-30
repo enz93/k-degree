@@ -243,8 +243,8 @@ if __name__ == "__main__":
     f.write(str(k_degree)+" ")
     f.close()
     f = open('metric_norm_anonymization-compare', 'a')
-    norm_greedy = vector_norm(array_degrees_greedy)
-    norm_dp = vector_norm(vertex_degree_dp)
+    norm_greedy = vector_norm(array_degrees_greedy-array_degrees)
+    norm_dp = vector_norm(vertex_degree_dp-array_degrees)
     r = norm_greedy/norm_dp
     f.write(str(r) + " ")
     f.close()

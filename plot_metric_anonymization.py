@@ -32,14 +32,19 @@ if __name__ == "__main__":
                 if size == 1:
                     for line in content:
                         ratio = line.split(" ")
-
-                    print(ratio)
-
+                    list_ratio = []
+                    for i in ratio:
+                        list_ratio.append(float(i))
+                    list_k_array = []
+                    for i in k_array:
+                        list_k_array.append(float(i))
                     plt.clf()
-
                     plt.figure(figsize=(16, 10))
-                    plt.plot(k_array, ratio, 'r--')
-                    plt.title("Graph friend 1000 10 100")
+                    #plt.ylim(0, 5)
+                    #plt.xlim(min(k_array), max(k_array))
                     plt.ylabel("Ratio")
                     plt.xlabel("k_degree")
+                    plt.plot(list_k_array,list_ratio, 'r--')
+                    #plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
+                    plt.title("Graph friend 1000 10 100")
                     plt.savefig("ratio_fakedataset.png", dpi=120)

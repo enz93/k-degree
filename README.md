@@ -1,4 +1,4 @@
-## k-degree anonymity
+### k-degree anonymity
 ### Install requirements
 ```
 pip install -r requirements.txt
@@ -10,23 +10,24 @@ python plot_metrics_supergraph.py file_of_array_of_norm file_of_array_of_k-degre
 python supergraph-dimonstration.py k-degree
 pyhton degree-anonymization-compare.py k-degree file_of_graph_to_anonymize
 python plot_metric_anonymization.py file_of_array_of_k-degree_of_degree_anonymization file_of_array_ratio_of_degree_anonymization
-
+```
 #### Example
 ```
 python k-degree-anonymization.py 5 Dataset/positivetesting/web-BerkStan-dir/web-BerkStan
 python plot_metrics.py Metrics/metric_norm_socfb Metrics/metric_k_socfb Metrics/metric_cc_socfb "Socfb-Rice31"
 python degree-anonymization-compare.py 10 Dataset/trialdataset/graph_friend_1000_10_100.csv (8 is the max number of degree for an optimal computation of greedy alghoritm with graph_friend_1000_10_100.csv dataset. With real dataset doesn't work degree alghoritm)
-
-#### Dataset
+```
+### Dataset
+```
 we use different dataset for testing suoergraph alghoritm:
 -Zachary karate club network(inside networkx library) - The dataset contains social ties among the members of a university karate club collected by Wayne Zachary in 1977. (Usata per mostrare un immagine dei risultati del programma)
 -BERKSTAN-DIR. Hyperlink network of the websites of Berkley and Stanford University. Nodes represent web pages and directed edges represent hyperlinks.(Real Dataset)
 -RICE31. A social friendship network extracted from Facebook consisting of people (nodes) with edges representing friendship ties(Real Dataset)
 These datasets allow to obtain a positive results.
 -MANN-a27 and P-HAT1500-3. supergraph alghoritm always returns null because the condition is not satisfied.
-
-#### Hints && Our Testing
-
+```
+### Hints && Our Testing
+```
 1)Degree Anonymization 
 
 python degree-anonymization-compare.py 3 Dataset/trialdataset/graph_friend_1000_10_100.csv
@@ -75,3 +76,4 @@ python k-degree-anonymization.py 17 Dataset/positivetesting/socfb-Rice31/socfb-R
 
 *)After these execution, we running
 plot_metrcis_supergraph.py Metrics/metric_norm_socfb Metrics/metric_k_socfb Metrics/metric_cc_socfb "Socfb-Rice31" or with "_web"
+```
