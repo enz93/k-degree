@@ -66,12 +66,18 @@ if __name__ == "__main__":
                     plt.xlabel("k_degree")
                     plt.legend(('Original Graph', 'Supergraph'), loc='lower center', shadow=True)
                     plt.title(str(sys.argv[4]))
-                    #plt.savefig("metric_cc_web.png") #if choose dataset web
-                    plt.savefig("metric_cc_socfb.png")
+                    plt.savefig("metric_cc_web.png") #if choose dataset web
+                    #plt.savefig("metric_cc_socfb.png")
                     plt.clf()
-                    plt.plot(k_array, norm, 'r--')
+                    list_norm = []
+                    for i in norm:
+                        list_norm.append(float(i))
+                    list_k_array = []
+                    for i in k_array:
+                        list_k_array.append(float(i))
+                    plt.plot(list_k_array, list_norm, 'r--')
                     plt.ylabel("Norm of vector a")
                     plt.xlabel("k_degree")
                     plt.title(str(sys.argv[4]))
-                    #plt.savefig("metric_norm_web.png") #if choose dataset web
-                    plt.savefig("metric_norm_socfb.png") #otherwise
+                    plt.savefig("metric_norm_web.png") #if choose dataset web
+                    #plt.savefig("metric_norm_socfb.png") #otherwise

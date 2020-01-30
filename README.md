@@ -14,7 +14,7 @@ python plot_metric_anonymization.py file_of_array_of_k-degree_of_degree_anonymiz
 #### Example
 ```
 python k-degree-anonymization.py 5 Dataset/positivetesting/web-BerkStan-dir/web-BerkStan
-python plot_metrics.py Metrics/metric_norm_socfb Metrics/metric_k_socfb Metrics/metric_cc_socfb "Socfb-Rice31"
+python plot_metrics_supergraph.py Metrics/metric_norm_socfb Metrics/metric_k_socfb Metrics/metric_cc_socfb "Socfb-Rice31"
 python degree-anonymization-compare.py 10 Dataset/trialdataset/graph_friend_1000_10_100.csv (8 is the max number of degree for an optimal computation of greedy alghoritm with graph_friend_1000_10_100.csv dataset. With real dataset doesn't work degree alghoritm)
 ```
 ### Dataset
